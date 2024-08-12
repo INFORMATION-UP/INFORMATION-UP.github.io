@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .producto {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .carousel-images img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .precio {
+            font-weight: bold;
+            color: #e67e22;
+        }
+        .caracteristicas {
+            text-align: left;
+            margin-top: 10px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            display: none; /* Inicialmente oculto */
+        }
+        .show-details .caracteristicas {
+            display: block; /* Muestra las características si la clase está activa */
+        }
+        .toggle-btn {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CATÁLOGO DE PRODUCTOS - CELULARES</h1>
+    <div class="catalogo">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <div class="carousel">
+                <button class="arrow left" onclick="moveSlide(-1, this)">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="IMAGENES CATÁLOGO/INF-HOT40PRO-256-GD.jpg" alt="Producto 1">
+                    <img src="IMAGENES CATÁLOGO/INF-HOT40PRO-256-BK-600x600.jpg" alt="Producto 1">
+                    <img src="IMAGENES CATÁLOGO/INF-HOT40PRO-256-BL-600x600.jpg" alt="Producto 1">
+                </div>
+                <button class="arrow right" onclick="moveSlide(1, this)">&#10095;</button>
+            </div>
+            <b><small>CELULAR INFINIX HOT 40 PRO 8GB 256GB GD/BK/BL</small></b>
+            <h5>SKU: INF-HOT40PRO-256-GD</h5>
+            <p class="precio">$215.99</p>
+            <button class="toggle-btn" onclick="toggleDetails(this)">Mostrar Características</button>
+            <div class="caracteristicas">
+                <p>- Rom 256GB expandible MicroSd</p>
+                <p>- Cámara Principal: 108mp</p>
+                <p>- Video: 1080p@30fps</p>
+                <p>- Batería 5000 mAh</p>
+                <p>- Carga 33W</p>
+            </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+            <div class="carousel">
+                <button class="arrow left" onclick="moveSlide(-1, this)">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-VD-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-GD-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-BK-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-GR-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-VD-2-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-VD-1-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-GD-1-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-GD-2-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-VD-3-600x600.jpg" alt="Producto 2">
+                </div>
+                <button class="arrow right" onclick="moveSlide(1, this)">&#10095;</button>
+            </div>
+            <b><small>CELULAR INFINIX NOTE 40 PRO 8GB+8GB(VIRTUAL / 256GB) VD/GD/BK/GR</small></b>
+            <h5>SKU: INF-NOTE40PRO-VD</h5>
+            <p class="precio">$215.99</p>
+            <button class="toggle-btn" onclick="toggleDetails(this)">Mostrar Características</button>
+            <div class="caracteristicas">
+                <p>- OS: Android 14 XOS 14</p>
+                <p>- Memoria: 16GB (8GB +8GB Virtual)</p>
+                <p>- Almacenamiento: 256GB</p>
+                <p>- Batería 5000 mAh</p>
+                <p>- Carga rápida: 70W</p>
+                <p>- Carga inalámbrica: 20W</p>
+            </div>
+        </div>
+        <!-- Otros productos... -->
+    </div>
+
+    <script>
+        function moveSlide(step, button) {
+            const carousel = button.parentElement.querySelector('.carousel-images');
+            const slides = carousel.children;
+            const totalSlides = slides.length;
+            const slideWidth = slides[0].offsetWidth;
+            const maxTranslateX = -((totalSlides - 1) * slideWidth);
+            let currentTransform = getCurrentTransform(carousel);
+    
+            let currentIndex = Math.round(-currentTransform / slideWidth);
+            let newIndex = currentIndex + step;
+    
+            if (newIndex < 0) newIndex = totalSlides - 1;
+            if (newIndex >= totalSlides) newIndex = 0;
+    
+            const newTransform = -newIndex * slideWidth;
+            carousel.style.transform = `translateX(${newTransform}px)`;
+        }
+    
+        function getCurrentTransform(element) {
+            const matrix = window.getComputedStyle(element).transform;
+            if (matrix === 'none') return 0;
+            const values = matrix.match(/matrix\(([^)]+)\)/)[1].split(', ');
+            return parseFloat(values[4]);
+        }
+
+        function toggleDetails(button) {
+            const producto = button.parentElement;
+            const detalles = producto.querySelector('.caracteristicas');
+            const isVisible = detalles.classList.contains('show-details');
+            detalles.classList.toggle('show-details', !isVisible);
+            button.textContent = isVisible ? 'Mostrar Características' : 'Ocultar Características';
+        }
+    </script>
+
+</body>
+</html>

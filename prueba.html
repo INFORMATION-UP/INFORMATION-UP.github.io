@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .producto {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .carousel-images img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .precio {
+            font-weight: bold;
+            color: #e67e22;
+        }
+        .producto-title {
+            color: #000000; /* Color negro */
+            font-weight: bold;
+        }
+        .info {
+            margin-top: 10px;
+            text-align: left;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .info-btn {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .info-btn:hover {
+            background-color: #d35400;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CATÁLOGO DE PRODUCTOS - CELULARES</h1>
+    <div class="catalogo">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <div class="carousel">
+                <button class="arrow left" onclick="moveSlide(-1, this)">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="IMAGENES CATÁLOGO/INF-HOT40PRO-256-GD.jpg" alt="Producto 1">
+                    <img src="IMAGENES CATÁLOGO/INF-HOT40PRO-256-BK-600x600.jpg" alt="Producto 1">
+                    <img src="IMAGENES CATÁLOGO/INF-HOT40PRO-256-BL-600x600.jpg" alt="Producto 1">
+                </div>
+                <button class="arrow right" onclick="moveSlide(1, this)">&#10095;</button>
+            </div>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <b><small class="producto-title">CELULAR INFINIX HOT 40 PRO 8GB 256GB GD/BK/BL</small></b>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <h5>CÓDIGO SKU: INF-HOT40PRO-256-GD</h5>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <br>-Pantalla IPS LCD 120Hz
+            <br>-6.78″ 1080 x 2460 PixelsS
+            <br>-Octa-core MediaTek Helio G99MT8781
+            <br>-Batería 5000 mAh / GPU: Malí-G57 MC2
+            <br>-Sistema Operativo Android 13 XOS 13.5
+            <br>-RAM 8GB / ROM 256GB exp. MicroSd
+            <br>-Camara Principal: Doble, 108 MP
+            <br>-Camara Frontal: 32 MP
+            <br>-Video: 1080p@30fps
+            <br>-Bateria 5000 mAh / Carga 33W
+            <hr>
+            <p class="precio">Precio Al Contado: $215,99</p>
+            <button class="info-btn" onclick="toggleInfo(this)">Más Información</button>
+            <div class="info" style="display: none;">
+                <br><b>CRÉDITO DIRECTO: APLICA SOLO CON TU CÉDULA</b>
+                <br>18 cuotas: $14.79
+                <br>09 cuotas: $24.67
+                <br>06 cuotas: $33.28
+                <br>===================================
+                <br><b>DIFIERA CON TUS TARJETAS DE CREDITO MISMO VALOR / SIN INTERESES</b>
+                <br>12 cuotas: $9.08
+                <br>06 cuotas: $18.16
+                <br>03 cuotas: $36.33
+                <br>===================================
+                <br><b>PRECIOS EN OTROS COLORES</b>
+                <br>TEC-SPARKGO24-BK: $108.99
+                <br>TEC-SPARKGO24-WH: $108.99
+                <br>TEC-SPARKGO24-VD: $108.99
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto">
+            <div class="carousel">
+                <button class="arrow left" onclick="moveSlide(-1, this)">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-VD-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-GD-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-BK-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-GR-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-VD-2-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-VD-1-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-GD-1-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-GD-2-600x600.jpg" alt="Producto 2">
+                    <img src="IMAGENES CATÁLOGO/INF-NOTE40PRO-VD-3-600x600.jpg" alt="Producto 2">
+                </div>
+                <button class="arrow right" onclick="moveSlide(1, this)">&#10095;</button>
+            </div>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <b><small class="producto-title">CELULAR INFINIX NOTE 40 PRO 8GB+8GB(VIRTUAL / 256GB) VD/GD/BK/GR</small></b>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <h5>CÓDIGO SKU: INF-NOTE40PRO-VD</h5>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <br>-Display: AMOLED de 6.78, HD+
+            <br>-OS: Android 14 XOS 14 
+            <br>-MediaTek Helio G99 Ultimate 2.2 Ghz
+            <br>-Memoria: 16GB (8GB +8GB Virtual)
+            <br>-Almacenamiento: 256GB
+            <br>-MicroSD (expandible hasta 1TB)
+            <br>-Camara Principal: Triple, 108 MP
+            <br>-Camara Frontal: 32 MP
+            <br>-Sonido: Parlantes JBL
+            <br>-Bateria: 5000 mAh / C.R: 70W / C.I: 20W
+            <hr>
+            <p class="precio">Precio Al Contado: $215,99</p>
+            <button class="info-btn" onclick="toggleInfo(this)">Más Información</button>
+            <div class="info" style="display: none;">
+                 <br><b>CRÉDITO DIRECTO: APLICA SOLO CON TU CÉDULA</b>
+                <br>18 cuotas: $14.79
+                <br>09 cuotas: $24.67
+                <br>06 cuotas: $33.28
+                <br>===================================
+                <br><b>DIFIERA CON TUS TARJETAS DE CREDITO MISMO VALOR / SIN INTERESES</b>
+                <br>12 cuotas: $9.08
+                <br>06 cuotas: $18.16
+                <br>03 cuotas: $36.33
+                <br>===================================
+                <br><b>PRECIOS EN OTROS COLORES</b>
+                <br>TEC-SPARKGO24-BK: $108.99
+                <br>TEC-SPARKGO24-WH: $108.99
+                <br>TEC-SPARKGO24-VD: $108.99
+            </div>
+        </div>
+        
+        <!-- Producto 3 -->
+        <div class="producto">
+            <div class="carousel">
+                <button class="arrow left" onclick="moveSlide(-1, this)">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="IMAGENES CATÁLOGO/Celular Tecno Spark Go 2024 128GB/8GB RAM - Negro+.png" alt="Producto 3">
+                    <img src="IMAGENES CATÁLOGO/TEC-SPARKGO24-WH-600x600.jpg" alt="Producto 3">
+                    <img src="IMAGENES CATÁLOGO/TEC-SPARKGO24-VD-600x600.jpg" alt="Producto 3">
+                </div>
+                <button class="arrow right" onclick="moveSlide(1, this)">&#10095;</button>
+            </div>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <b><small class="producto-title">CELULAR TECNO SPARK GO 2024 4GB - 128GB BK/WH/VD</small></b>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <h5>CÓDIGO SKU: TEC-SPARKGO24-BK</h5>
+            <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+            <br>-Pantalla IPS LCD de 6,6″, resolución HD+ 720x1612 90Hz
+            <br>-Procesador: Octa Core Unisoc T606
+            <br>-Android 13 Go Edition
+            <br>-RAM 4GB / ROM 128GB
+            <br>-Camara trasera: 13MP / Frontal: 8MP
+            <br>-Bateria 5000mAh
+            <br>-Carga 10W cable
+            <hr>
+            <p class="precio">Precio Al Contado: $108,99</p>
+            <button class="info-btn" onclick="toggleInfo(this)">Más Información</button>
+            <div class="info" style="display: none;">
+                <br><b>CRÉDITO DIRECTO: APLICA SOLO CON TU CÉDULA</b>
+                <br>18 cuotas: $14.79
+                <br>09 cuotas: $24.67
+                <br>06 cuotas: $33.28
+                <br>===================================
+                <br><b>DIFIERA CON TUS TARJETAS DE CREDITO MISMO VALOR / SIN INTERESES</b>
+                <br>12 cuotas: $9.08
+                <br>06 cuotas: $18.16
+                <br>03 cuotas: $36.33
+                <br>===================================
+                <br><b>PRECIOS EN OTROS COLORES</b>
+                <br>TEC-SPARKGO24-BK: $108.99
+                <br>TEC-SPARKGO24-WH: $108.99
+                <br>TEC-SPARKGO24-VD: $108.99
+            </div>
+        </div>
+
+        <div class="catalogo">
+            <!-- Producto 4 -->
+            <div class="producto">
+                <div class="carousel">
+                    <button class="arrow left" onclick="moveSlide(-1, this)">&#10094;</button>
+                    <div class="carousel-images">
+                        <img src="IMAGENES CATÁLOGO/TEC-SPARK20PRO-SL-600x600.jpg" alt="Producto 4">
+                        <img src="IMAGENES CATÁLOGO/TEC-SPARK20PRO-VD-600x600.jpg" alt="Producto 4">
+                        <img src="IMAGENES CATÁLOGO/TEC-SPARK20PRO-BK-600x600.jpg" alt="Producto 4">
+                        <img src="IMAGENES CATÁLOGO/TEC-SPARK20PRO-NA-600x600.jpg" alt="Producto 4">
+                    </div>
+                    <button class="arrow right" onclick="moveSlide(1, this)">&#10095;</button>
+                </div>
+                <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+                <b><small class="producto-title">CELULAR TECNO SPARK 20PRO 8GB 256GB SL/VD/BK/NA</small></b>
+                <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+                <h5>CÓDIGO SKU: TEC-SPARK20PRO-SL</h5>
+                <hr size="2px" width="100%" noshade="noshade" align="right" color="black"/>
+                <br>-Pantalla: 6.67″ LCD IPS 120Hz Refresh Rate 1080 x 2400 pixeles
+                <br>-Procesador: Octa-core MediaTek Helio G99
+                <br>-Android 13 HIOS 13
+                <br>-Ram: 8GB RAM expandible a 16GB
+                <br>-Capacidad: 256GB ROM
+                <br>-Camara Principal: 108MP
+                <br>-Camara Frontal: 32MP
+                <br>-Bluetooth 5.2
+                <br>-Bateria: 5000mAh
+                <br>-Carga rapida 33W
+                <hr>
+                <p class="precio">Precio Al Contado: $204,99</p>
+                <button class="info-btn" onclick="toggleInfo(this)">Más Información</button>
+                <div class="info" style="display: none;">
+                    <br><b>CRÉDITO DIRECTO: APLICA SOLO CON TU CÉDULA</b>
+                    <br>18 cuotas: $
+                    <br>09 cuotas: $
+                    <br>06 cuotas: $
+                    <br>===================================
+                    <br><b>DIFIERA CON TUS TARJETAS DE CREDITO MISMO VALOR / SIN INTERESES</b>
+                    <br>12 cuotas: $
+                    <br>06 cuotas: $
+                    <br>03 cuotas: $
+                    <br>===================================
+                    <br><b>PRECIOS EN OTROS COLORES</b>
+                    <br>TEC-SPARK20PRO-SL: $204.99
+                    <br>TEC-SPARK20PRO-VD: $204.99
+                    <br>TEC-SPARK20PRO-BK: $204.99
+                    <br>TEC-SPARK20PRO-NA: $204.99
+                </div>
+            </div>
+
+    </div>
+
+    <script>
+        function moveSlide(step, button) {
+            const carousel = button.parentElement.querySelector('.carousel-images');
+            const slides = carousel.children;
+            const totalSlides = slides.length;
+            const slideWidth = slides[0].offsetWidth;
+            const maxTranslateX = -((totalSlides - 1) * slideWidth);
+            let currentTransform = getCurrentTransform(carousel);
+    
+            let currentIndex = Math.round(-currentTransform / slideWidth);
+            let newIndex = currentIndex + step;
+    
+            if (newIndex < 0) newIndex = totalSlides - 1;
+            if (newIndex >= totalSlides) newIndex = 0;
+    
+            const newTransform = -newIndex * slideWidth;
+            carousel.style.transform = `translateX(${newTransform}px)`;
+        }
+    
+        function getCurrentTransform(element) {
+            const matrix = window.getComputedStyle(element).transform;
+            if (matrix === 'none') return 0;
+            const values = matrix.match(/matrix\(([^)]+)\)/)[1].split(', ');
+            return parseFloat(values[4]);
+        }
+
+        function toggleInfo(button) {
+            const info = button.nextElementSibling;
+            if (info.style.display === "none") {
+                info.style.display = "block";
+                button.textContent = "Ocultar Información";
+            } else {
+                info.style.display = "none";
+                button.textContent = "Más Información";
+            }
+        }
+    </script>
+
+</body>
+</html>
